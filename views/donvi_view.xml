@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="donvi_tree_view" model="ir.ui.view">
+            <field name="name"> DonVi  List (Tree) View</field>
+            <field name="model">donvi</field>
+            <field name="arch" type="xml">
+                <tree string="">
+	                <field name="ma_donvi"/>
+                    <field name="name"/>
+                    <field name="ten_daydu_donvi"/>
+                    <field name="user_ids"/>
+                    <field name="goithau_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="user_form_view" model="ir.ui.view">
+            <field name="name">Don Vi Form View</field>
+            <field name="model">donvi</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="button_donvi" string="Button Đơn vị" type="object" class="btn-primary"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="ma_donvi"/>
+                            </group>
+                            <group>
+                                <field name="ten_daydu_donvi"/>
+                                <field name="user_ids"/>
+                                <field name="goithau_ids"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="donvi_action_1" model="ir.actions.act_window">
+            <field name="name">DonVi Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">donvi</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="donvi_menu_1" name="Thông tin về Đơn vị" parent = "module_1.goithau_root_menu" action="module_1.donvi_action_1" sequence="2"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="goithau_tree_view" model="ir.ui.view">
+            <field name="name">Gói thầu List (Tree) View</field>
+            <field name="model">goithau</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="ten_goithau"/>
+                    <field name="chuthich"/>
+                    <field name="donvi_id"/>
+                    <field name="linhvucdauthau_id"/>
+                    <field name="hinhthucdauthau_id"/>
+                    <field name="hinhthuclcnt_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="goithau_form_view" model="ir.ui.view">
+            <field name="name">Gói thầu Form View</field>
+            <field name="model">goithau</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="cancel_order" string="Cancel Order" type="object" class="btn-primary"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="ten_goithau"/>
+                                <field name="donvi_id"/>
+                                <field name="linhvucdauthau_id"/>
+                                <field name="hinhthucdauthau_id"/>
+                                <field name="hinhthuclcnt_id"/>
+                            </group>
+                            <group>
+                                <field name="chuthich"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="goithau_action_1" model="ir.actions.act_window">
+            <field name="name">Gói thầu Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">goithau</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="goithau_root_menu" name="Quản lý Gói thầu" action="module_1.goithau_action_1" sequence="1"/>
+<!--        <menuitem id="user_menu_1" name="Thông tin users" parent = "module_1.user_root_menu" action="module_1.user_action_1" sequence="2"/>-->
+
+    </data>
+</odoo>

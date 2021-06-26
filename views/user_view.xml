@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="user_tree_view" model="ir.ui.view">
+            <field name="name">Table User List (Tree) View</field>
+            <field name="model">tbl_user</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="user_name"/>
+                    <field name="donvi_id"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="passw"/>
+                    <!--                    <field name="status"/>-->
+                    <!--                    <field name="chuthich"/>-->
+                    <!--                    <field name="state"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="tbluser_form_view" model="ir.ui.view">
+            <field name="name">Table User Form View</field>
+            <field name="model">tbl_user</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="button_user" string="User Status" type="object" class="btn-primary"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="user_name"/>
+                                <field name="donvi_id"/>
+                            </group>
+                            <group>
+                                <field name="email"/>
+                                <field name="passw"/>
+                                <field name="status"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!--        <record id="tbl_user_form_view" model="ir.ui.view">-->
+<!--            <field name="name">User Form View</field>-->
+<!--            <field name="model">tbl_user</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="">-->
+<!--                    <header>-->
+<!--                        <button name="button_user" string="User Status" type="object" class="btn-primary"/>-->
+<!--                        <field name="state" widget="statusbar"/>-->
+<!--                    </header>-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="user_name"/>-->
+<!--                                <field name="donvi_id"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="email"/>-->
+<!--                                <field name="passw"/>-->
+<!--                                <field name="status"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+        <record id="user_action_1" model="ir.actions.act_window">
+            <field name="name">User Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tbl_user</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="user_menu_1" name="Thông tin users" parent="module_1.goithau_root_menu" action="module_1.user_action_1" sequence="3"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tbluser_internal_user,access_tbluser_internal_user,model_tbl_user,base.group_user,1,0,0,0
+access_tbluser_user,access_tbluser_user,model_tbl_user,module_1.group_tbluser_user,1,0,0,0
+access_tbluser_manager,access_tbluser_manager,model_tbl_user,module_1.group_tbluser_manager,1,1,1,1
+access_donvi_user,access_donvi_user,model_donvi,module_1.group_donvi_user,1,0,0,0
+access_donvi_manager,access_donvi_manager,model_donvi,module_1.group_donvi_manager,1,1,1,1
+access_htlcnt_user,access_htlcnt_user,model_hinhthuclcnt,module_1.group_tbluser_user,1,0,1,0
+access_htlcnt_manager,access_htlcnt_manager,model_hinhthuclcnt,module_1.group_tbluser_manager,1,1,1,1
+access_lvdt_user,access_lvdt_user,model_linhvucdauthau,module_1.group_tbluser_user,1,0,1,0
+access_lvdt_manager,access_lvdt_manager,model_linhvucdauthau,module_1.group_tbluser_manager,1,1,1,1
+access_htdt_user,access_htlcnt_user,model_hinhthucdauthau,module_1.group_tbluser_user,1,0,1,0
+access_htdt_manager,access_htlcnt_manager,model_hinhthucdauthau,module_1.group_tbluser_manager,1,1,1,1
+access_goithau_user,access_goithau_user,model_goithau,module_1.group_tbluser_user,1,0,1,0
+access_goithau_manager,access_goithau_manager,model_goithau,module_1.group_tbluser_manager,1,1,1,1

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!--        List, Form View cho Lĩnh vực Đấu thầu -->
+        <record id="linhvucdauthau_tree_view" model="ir.ui.view">
+            <field name="name"> Lĩnh vực Đấu thầu List (Tree) View</field>
+            <field name="model">linhvucdauthau</field>
+            <field name="arch" type="xml">
+                <tree string="">
+	                <field name="ma_lv_dauthau"/>
+<!--                    <field name="ten_lv_dauthau"/>-->
+                    <field name="name"/>
+                    <field name="goithau_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="linhvucdauthau_form_view" model="ir.ui.view">
+            <field name="name">Lĩnh vực Đấu thầu Form View</field>
+            <field name="model">linhvucdauthau</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="ma_lv_dauthau"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="goithau_ids"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!--        List, Form View cho Hình thức Đấu thầu -->
+        <record id="hinhthucdauthau_tree_view" model="ir.ui.view">
+            <field name="name"> Hình thức Đấu thầu List (Tree) View</field>
+            <field name="model">hinhthucdauthau</field>
+            <field name="arch" type="xml">
+                <tree string="">
+	                <field name="ma_ht_dauthau"/>
+                    <field name="name"/>
+                    <field name="goithau_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hinhthucdauthau_form_view" model="ir.ui.view">
+            <field name="name">Hình thức Đấu thầu Form View</field>
+            <field name="model">hinhthucdauthau</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="ma_ht_dauthau"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="goithau_ids"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--        List, Form View cho Hình thức Lựa chọn Nhà thầu -->
+        <record id="hinhthuclcnt_tree_view" model="ir.ui.view">
+            <field name="name"> Hình thức Lựa chọn Nhà thầu List (Tree) View</field>
+            <field name="model">hinhthuclcnt</field>
+            <field name="arch" type="xml">
+                <tree string="">
+	                <field name="ma_hinhthuc_lcnt"/>
+                    <field name="name"/>
+                    <field name="goithau_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hinhthuclcnt_form_view" model="ir.ui.view">
+            <field name="name">Hình thức Lựa chọn Nhà thầu Form View</field>
+            <field name="model">hinhthuclcnt</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="ma_hinhthuc_lcnt"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="goithau_ids"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--        Menu -->
+        <record id="donvi_action_1" model="ir.actions.act_window">
+            <field name="name">DonVi Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">donvi</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="hinhthucdauthau_action_1" model="ir.actions.act_window">
+            <field name="name">Hình thức Đấu thầu</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hinhthucdauthau</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="linhvucdauthau_action_1" model="ir.actions.act_window">
+            <field name="name">Lĩnh vực Đấu thầu</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">linhvucdauthau</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="hinhthuclcnt_action_1" model="ir.actions.act_window">
+            <field name="name">Hình thức Lựa chọn Nhà thầu</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hinhthuclcnt</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="thongtin_dauthau_menu" name="Thông tin về Đấu thầu" parent = "module_1.goithau_root_menu" action="module_1.donvi_action_1" sequence="3"/>
+        <menuitem id="hinhthuc_dauthau_menu" name="Hình thức Đấu thầu" parent = "module_1.thongtin_dauthau_menu" action="module_1.hinhthucdauthau_action_1" sequence="1"/>
+        <menuitem id="linhvuc_dauthau_menu" name="Lĩnh vực Đấu thầu" parent = "module_1.thongtin_dauthau_menu" action="module_1.linhvucdauthau_action_1" sequence="2"/>
+        <menuitem id="hinhthuc_lcnt_menu" name="Hình thức Lựa chọn Nhà thầu" parent = "module_1.thongtin_dauthau_menu" action="module_1.hinhthuclcnt_action_1" sequence="3"/>
+
+    </data>
+</odoo>
