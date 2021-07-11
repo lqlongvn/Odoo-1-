@@ -20,6 +20,19 @@
             <field name="implied_ids" eval="[(4, ref('module_1.group_tbluser_user'))]"/>
         </record>
 
+        <record id="goithau_access_by_creation_user" model="ir.rule">
+            <field name="name">GoiThau access by creation user</field>
+            <field ref="model_goithau" name="model_id"/>
+            <field name="domain_force">[('create_uid', '=', user.id )]</field>
+            <field name="groups" eval="[(4, ref('module_1.group_tbluser_user'))]"/>
+        </record>
+
+        <record id="goithau_access_by_manager" model="ir.rule">
+            <field name="name">GoiThau access by manager</field>
+            <field ref="model_goithau" name="model_id"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('module_1.group_tbluser_manager'))]"/>
+        </record>
 
 
     </data>
