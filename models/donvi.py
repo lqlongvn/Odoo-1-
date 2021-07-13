@@ -14,3 +14,16 @@ class Donvi(models.Model):
 
     def button_donvi(self):
         pass
+
+    goithau_count = fields.Integer(compute='get_goithau_count', string='Gói Thầu ', store=False)
+
+    def get_goithau_count(self):
+        self.goithau_count = 8
+        return self.goithau_count
+
+    tbluser_count = fields.Integer(compute='get_tbluser_count', string='User ', store=False)
+
+    def get_tbluser_count(self):
+        self.tbluser_count = 6
+        return self.goithau_count
+
