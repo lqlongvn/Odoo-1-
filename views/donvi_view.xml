@@ -19,11 +19,11 @@
 
 
         <record id="donvi_tree_view" model="ir.ui.view">
-            <field name="name"> DonVi  List (Tree) View</field>
+            <field name="name">DonVi List (Tree) View</field>
             <field name="model">donvi</field>
             <field name="arch" type="xml">
                 <tree string="">
-	                <field name="ma_donvi"/>
+                    <field name="ma_donvi"/>
                     <field name="name"/>
                     <field name="ten_daydu_donvi"/>
                     <field name="user_ids"/>
@@ -41,18 +41,24 @@
                         <button name="button_donvi" string="Button Đơn vị" type="object" class="btn-primary"/>
                     </header>
                     <sheet>
-                        <div class="oe_button_box" name="button_box">
-                            <button class="oe_stat_button" type="action"
-                                    name="%(module_1.list_donvi_action)d">
-                                <field name="goithau_count" widget="statinfo"/>
-                            </button>
-                        </div>
-                        <div class="oe_button_box" name="button_box">
-                            <button class="oe_stat_button" type="action"
-                                    name="%(module_1.list_tbluser_action)d">
-                                <field name="tbluser_count" widget="statinfo"/>
-                            </button>
-                        </div>
+                        <group>
+                            <group>
+                                <div class="oe_button_box" name="button_box">
+                                    <button class="oe_stat_button" type="action"
+                                            name="%(module_1.list_donvi_action)d">
+                                        <field name="goithau_count" widget="statinfo"/>
+                                    </button>
+                                </div>
+                            </group>
+                            <group>
+                                <div class="oe_button_box" name="button_box">
+                                    <button class="oe_stat_button" type="action"
+                                            name="%(module_1.list_tbluser_action)d">
+                                        <field name="tbluser_count" widget="statinfo"/>
+                                    </button>
+                                </div>
+                            </group>
+                        </group>
                         <group>
                             <group>
                                 <field name="name"/>
@@ -76,7 +82,8 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="donvi_menu_1" name="Thông tin về Đơn vị" parent = "module_1.goithau_root_menu" action="module_1.donvi_action_1" sequence="2"/>
+        <menuitem id="donvi_menu_1" name="Thông tin về Đơn vị" parent="module_1.goithau_root_menu"
+                  action="module_1.donvi_action_1" sequence="2"/>
 
     </data>
 </odoo>
