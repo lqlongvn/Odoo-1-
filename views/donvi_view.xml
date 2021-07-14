@@ -6,7 +6,7 @@
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">goithau</field>
             <field name="view_mode">tree,form</field>
-            <field name="domain">[('id', '=', active_id)]</field>
+            <field name="domain">[('donvi_id', '=', active_id)]</field>
         </record>
 
         <record id="list_tbluser_action" model="ir.actions.act_window">
@@ -14,7 +14,7 @@
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">tbl_user</field>
             <field name="view_mode">tree,form</field>
-            <field name="domain">[('id', '=', active_id)]</field>
+            <field name="domain">[('donvi_id', '=', active_id)]</field>
         </record>
 
 
