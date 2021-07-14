@@ -44,4 +44,14 @@ class Goithau(models.Model):
     state = fields.Selection(
         selection=[('0', 'Nhập số liệu'), ('1', 'Trưởng đơn vị duyệt'), ('2', 'Admin duyệt'), ('3', 'Gói thầu đã hủy')], string='State')
     def button_goithau_state(self):
-        pass
+        if self.state == '3':
+            self.state = '0'
+        elif self.state == '0':
+            self.state = '1'
+        elif self.state == '1':
+            self.state = '2'
+        elif self.state == '2':
+            self.state = '3'
+        else:
+            self.state = '0'
+

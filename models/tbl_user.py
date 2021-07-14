@@ -18,5 +18,13 @@ class Tbl_user(models.Model):
     active = fields.Boolean(default=True, string='Active')
 
     def button_user(self):
-        pass
-        # self.active = not self.active
+        if self.state == '3':
+            self.state = '0'
+        elif self.state == '0':
+            self.state = '1'
+        elif self.state == '1':
+            self.state = '2'
+        elif self.state == '2':
+            self.state = '3'
+        else:
+            self.state = '0'
