@@ -17,8 +17,14 @@ class Donvi(models.Model):
 
     goithau_count = fields.Integer(compute='get_goithau_count', string='Gói Thầu ', store=False)
 
+    # def get_goithau_count(self):
+    #     self.goithau_count = 8
+    #     return self.goithau_count
+
+    @api.depends('goithau_ids')
     def get_goithau_count(self):
-        self.goithau_count = 8
+        for donvi in self:
+            self.goithau_count = len(donvi.goithau_ids)
         return self.goithau_count
 
     tbluser_count = fields.Integer(compute='get_tbluser_count', string='User ', store=False)
