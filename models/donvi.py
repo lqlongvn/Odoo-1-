@@ -23,7 +23,13 @@ class Donvi(models.Model):
 
     tbluser_count = fields.Integer(compute='get_tbluser_count', string='User ', store=False)
 
+    # def get_tbluser_count(self):
+    #     self.tbluser_count = 6
+    #     return self.tbluser_count
+
+    @api.depends('user_ids')
     def get_tbluser_count(self):
-        self.tbluser_count = 6
-        return self.goithau_count
+        for donvi in self:
+            self.tbluser_count = len(donvi.user_ids)
+        return self.tbluser_count
 
