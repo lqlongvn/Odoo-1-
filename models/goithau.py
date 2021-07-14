@@ -35,11 +35,13 @@ class Goithau(models.Model):
     con_no_nha_thau = fields.Integer(string='Còn nợ nhà thầu')
     chuthich = fields.Char(string='Chú thích')
     date_BaoCao = fields.Datetime(string='Ngày báo cáo')
-    state = fields.Selection(
-        selection=[('0', 'Gói thầu nháp'), ('1', 'Gói thầu đã nhập'), ('2', 'Gói thầu báo cáo chính thức'), ('3', 'Gói thầu đã hủy')], string='State')
 
     active = fields.Boolean(default=True, string='Active')
-
     def cancel_order(self):
         pass
         # self.active = not self.active
+
+    state = fields.Selection(
+        selection=[('0', 'Nhập số liệu'), ('1', 'Trưởng đơn vị duyệt'), ('2', 'Admin duyệt'), ('3', 'Gói thầu đã hủy')], string='State')
+    def button_goithau_state(self):
+        pass
