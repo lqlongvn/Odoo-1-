@@ -1,5 +1,5 @@
 from odoo import fields, models, api
-
+from odoo.exceptions import ValidationError
 
 class Goithau(models.Model):
     _name = 'goithau'
@@ -54,4 +54,10 @@ class Goithau(models.Model):
             self.state = '3'
         else:
             self.state = '0'
+
+    def truongdonvi_confirm_goithau(self):
+        # raise ValidationError('Trưởng đơn vị đã Phê duyệt Gói thầu này!')
+        self.state = '2'
+
+
 
