@@ -36,13 +36,18 @@ class Goithau(models.Model):
     chuthich = fields.Char(string='Chú thích')
     date_BaoCao = fields.Datetime(string='Ngày báo cáo')
 
+    def unlink(self):
+        return super(Goithau, self).unlink()
+
+
     active = fields.Boolean(default=True, string='Active')
     def cancel_order(self):
         pass
         # self.active = not self.active
 
     state = fields.Selection(
-        selection=[('0', 'Nhập số liệu'), ('1', 'Trưởng đơn vị duyệt'), ('2', 'Admin duyệt'), ('3', 'Gói thầu đã hủy')], string='State')
+        selection=[('0', 'Nhập số liệu'), ('1', 'Trưởng đơn vị duyệt'), ('2', 'Admin duyệt'), ('3', 'Gói thầu đã hủy')],
+        default='0', string='State')
     def button_goithau_state(self):
         if self.state == '3':
             self.state = '0'
@@ -63,6 +68,12 @@ class Goithau(models.Model):
         # raise ValidationError('Trưởng đơn vị đã Phê duyệt Gói thầu này!')
         self.state = '0'
 
+    def remove_goithau(self):
+        # raise ValidationError('Remove!')
+        self.unlink()
 
+    def not_remove_goithau(self):
+        self.state = '3'
+        pass
 
 
