@@ -26,6 +26,7 @@
 <!--                        <button name="button_goithau_state" string="Trạng thái Gói thầu" type="object" class="btn-primary"/>-->
                         <button name="button_goithau_state" string="Trạng thái Gói thầu" type="object" class="btn-primary" states="0,2,3"/>
                         <button name="truongdonvi_confirm_goithau" string="Phê duyệt" type="object" class="btn-primary" states="1"/>
+                        <button name="truongdonvi_reject_goithau" string="Reject" type="object" class="btn-primary" style="background-color:red" states="1"/>
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>

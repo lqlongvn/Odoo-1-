@@ -59,5 +59,10 @@ class Goithau(models.Model):
         # raise ValidationError('Trưởng đơn vị đã Phê duyệt Gói thầu này!')
         self.state = '2'
 
+    def truongdonvi_reject_goithau(self):
+        # raise ValidationError('Trưởng đơn vị đã Phê duyệt Gói thầu này!')
+        self.state = '0'
+
+
 
 
