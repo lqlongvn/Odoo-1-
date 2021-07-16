@@ -48,19 +48,11 @@ class Goithau(models.Model):
     state = fields.Selection(
         selection=[('0', 'Nhập số liệu'), ('1', 'Trưởng đơn vị duyệt'), ('2', 'Admin duyệt'), ('3', 'Gói thầu đã hủy')],
         default='0', string='State')
-    def button_goithau_state(self):
-        if self.state == '3':
-            self.state = '0'
-        elif self.state == '0':
-            self.state = '1'
-        elif self.state == '1':
-            self.state = '2'
-        elif self.state == '2':
-            self.state = '3'
-        else:
-            self.state = '0'
+    
+    def chuyen_truongdv_duyet(self):
+        self.state = '1'
 
-    def truongdonvi_confirm_goithau(self):
+    def truongdonvi_duyet_goithau(self):
         # raise ValidationError('Trưởng đơn vị đã Phê duyệt Gói thầu này!')
         self.state = '2'
 
@@ -68,12 +60,16 @@ class Goithau(models.Model):
         # raise ValidationError('Trưởng đơn vị đã Phê duyệt Gói thầu này!')
         self.state = '0'
 
+    def admin_duyet_goithau(self):
+        self.state = '2'
+        pass
+
     def remove_goithau(self):
         # raise ValidationError('Remove!')
         self.unlink()
 
-    def not_remove_goithau(self):
+    def khoiphuc_goithau(self):
+        self.state = '0'
+
+    def btn_huy_goithau(self):
         self.state = '3'
-        pass
-
-
