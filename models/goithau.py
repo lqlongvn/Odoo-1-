@@ -48,7 +48,7 @@ class Goithau(models.Model):
     state = fields.Selection(
         selection=[('0', 'Nhập số liệu'), ('1', 'Trưởng đơn vị duyệt'), ('2', 'Admin duyệt'), ('3', 'Gói thầu đã hủy')],
         default='0', string='State')
-    
+
     def chuyen_truongdv_duyet(self):
         self.state = '1'
 

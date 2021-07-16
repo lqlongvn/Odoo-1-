@@ -10,5 +10,5 @@ access_lvdt_user,access_lvdt_user,model_linhvucdauthau,module_1.group_tbluser_us
 access_lvdt_manager,access_lvdt_manager,model_linhvucdauthau,module_1.group_tbluser_manager,1,1,1,1
 access_htdt_user,access_htlcnt_user,model_hinhthucdauthau,module_1.group_tbluser_user,1,0,1,0
 access_htdt_manager,access_htlcnt_manager,model_hinhthucdauthau,module_1.group_tbluser_manager,1,1,1,1
-access_goithau_user,access_goithau_user,model_goithau,module_1.group_tbluser_user,1,0,1,0
+access_goithau_user,access_goithau_user,model_goithau,module_1.group_tbluser_user,1,1,1,0
 access_goithau_manager,access_goithau_manager,model_goithau,module_1.group_tbluser_manager,1,1,1,1
