@@ -131,8 +131,13 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <!--  Chỉ có tbl_manager mới được nhìn thấy menu này-->
+        <menuitem id="thongtin_dauthau_menu" name="Thông tin về Đấu thầu" parent = "module_1.goithau_root_menu"
+                  action="module_1.donvi_action_1" sequence="3"
+                  groups="module_1.group_tbluser_manager"
 
-        <menuitem id="thongtin_dauthau_menu" name="Thông tin về Đấu thầu" parent = "module_1.goithau_root_menu" action="module_1.donvi_action_1" sequence="3"/>
+        />
+
         <menuitem id="hinhthuc_dauthau_menu" name="Hình thức Đấu thầu" parent = "module_1.thongtin_dauthau_menu" action="module_1.hinhthucdauthau_action_1" sequence="1"/>
         <menuitem id="linhvuc_dauthau_menu" name="Lĩnh vực Đấu thầu" parent = "module_1.thongtin_dauthau_menu" action="module_1.linhvucdauthau_action_1" sequence="2"/>
         <menuitem id="hinhthuc_lcnt_menu" name="Hình thức Lựa chọn Nhà thầu" parent = "module_1.thongtin_dauthau_menu" action="module_1.hinhthuclcnt_action_1" sequence="3"/>
