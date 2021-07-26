@@ -6,7 +6,7 @@
             <field name="model">goithau</field>
             <field name="arch" type="xml">
                 <tree string="">
-                    <field name="ten_goithau"/>
+                    <field name="name"/>
                     <field name="state"/>
                     <field name="chuthich"/>
                     <field name="donvi_id"/>
@@ -36,7 +36,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="ten_goithau"/>
+                                <field name="name" required="True"/>
                                 <field name="donvi_id"/>
                                 <field name="linhvucdauthau_id"/>
                                 <field name="hinhthucdauthau_id"/>
@@ -57,7 +57,7 @@
             <field name="model">goithau</field>
             <field name="arch" type="xml">
                 <search string="">
-                    <field name="ten_goithau"/>
+                    <field name="name"/>
                     <field name="donvi_id"/>
                     <field name="hinhthuclcnt_id"/>
                     <group>

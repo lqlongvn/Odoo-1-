@@ -4,22 +4,16 @@ from odoo.exceptions import ValidationError
 class Goithau(models.Model):
     _name = 'goithau'
 
-    ma_goithau = fields.Integer(string='ID của Gói thầu')
-    # donvi = fields.Integer(string='ID của Đơn vị')
+    # ma_goithau = fields.Integer(string='ID của Gói thầu')
+
     donvi_id = fields.Many2one(comodel_name='donvi', string='Đơn vị')
-
-    # ma_linh_vuc_dau_thau = fields.Integer(string='Mã Lĩnh vực đấu thầu')
     linhvucdauthau_id = fields.Many2one(comodel_name='linhvucdauthau', string='Lĩnh vực Đấu thầu')
-
-    # ma_hinh_thuc_dauthau = fields.Integer(string='Mã Hình thức Đấu thầu')
     hinhthucdauthau_id = fields.Many2one(comodel_name='hinhthucdauthau', string='Hình thức Đấu thầu')
-
-    # ma_hinh_thuc_lcnt = fields.Integer(string='Mã Hình thức Lựa chọn Nhà thầu')
     hinhthuclcnt_id = fields.Many2one(comodel_name='hinhthuclcnt', string='Hình thức Lựa chọn Nhà thầu')
 
 
-
-    ten_goithau = fields.Char(string='Tên Gói thầu')
+    # ten_goithau = fields.Char(string='Tên Gói thầu')
+    name = fields.Char(string='Tên Gói thầu')
     diadiem = fields.Char(string='Địa điểm triển khai')
     so_ngay_QDDT = fields.Char(string='Số, ngày QĐ đầu tư')
     Nam_QDDT = fields.Char(string='Năm QĐ đầu tư')
