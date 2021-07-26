@@ -131,7 +131,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <!--  Chỉ có tbl_manager mới được nhìn thấy menu này-->
+        <!--  Chỉ có tbluser_manager mới được nhìn thấy menu này-->
         <menuitem id="thongtin_dauthau_menu" name="Thông tin về Đấu thầu" parent = "module_1.goithau_root_menu"
                   action="module_1.donvi_action_1" sequence="3"
                   groups="module_1.group_tbluser_manager"

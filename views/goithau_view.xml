@@ -51,6 +51,23 @@
             </field>
         </record>
 
+        <!-- Search Panel và Group By    -->
+        <record id="goithau_search_view" model="ir.ui.view">
+            <field name="name">Gói Thầu Search</field>
+            <field name="model">goithau</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="ten_goithau"/>
+                    <field name="donvi_id"/>
+                    <field name="hinhthuclcnt_id"/>
+                    <group>
+                        <filter string="Group By Đơn vị" name="group_donvi_id" context="{'group_by':'donvi_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
         <record id="goithau_action_1" model="ir.actions.act_window">
             <field name="name">Gói thầu Action</field>
             <field name="type">ir.actions.act_window</field>
