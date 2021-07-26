@@ -37,12 +37,25 @@
                         <group>
                             <group>
                                 <field name="name" required="True"/>
+                                <field name="chudautu"/>
+                                <field name="so_ngay_QDDT"/>
+                                <field name="Nam_QDDT"/>
+                                <field name="diadiem"/>
                                 <field name="donvi_id"/>
                                 <field name="linhvucdauthau_id"/>
                                 <field name="hinhthucdauthau_id"/>
                                 <field name="hinhthuclcnt_id"/>
                             </group>
                             <group>
+                                <field name="gia_du_toan"/>
+                                <field name="gia_trung_thau"/>
+                                <field name="ten_donvi_trung_thau"/>
+                                <field name="thoigian_thuchien_hopdong_theo_QD"/>
+                                <field name="thoigian_thuchien_hopdong_thucte"/>
+                                <field name="giatri_hoanthanh"/>
+                                <field name="von_da_thanhtoan"/>
+                                <field name="con_no_nha_thau"/>
+                                <field name="da_quyet_toan"/>
                                 <field name="chuthich"/>
                             </group>
                         </group>
