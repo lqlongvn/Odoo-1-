@@ -25,10 +25,16 @@ class Goithau(models.Model):
     thoigian_thuchien_hopdong_thucte = fields.Char(string='Th/gian th/hiện Hợp đồng thực tế')
     giatri_hoanthanh = fields.Integer(string='Giá trị hoàn thành')
     von_da_thanhtoan = fields.Integer(string='Vốn đã thanh toán')
+    con_no_nha_thau = fields.Integer(string='Còn nợ nhà thầu', compute='compute_con_no_nhathau', store=False)
     da_quyet_toan = fields.Integer(string='Đã quyết toán')
-    con_no_nha_thau = fields.Integer(string='Còn nợ nhà thầu')
     chuthich = fields.Char(string='Chú thích')
     date_BaoCao = fields.Datetime(string='Ngày báo cáo')
+
+    @api.depends('giatri_hoanthanh', 'von_da_thanhtoan')
+    def compute_con_no_nhathau(self):
+        for goi_thau in self:
+            goi_thau.con_no_nha_thau = goi_thau.giatri_hoanthanh - goi_thau.von_da_thanhtoan
+
 
     def unlink(self):
         return super(Goithau, self).unlink()
