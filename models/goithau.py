@@ -15,7 +15,7 @@ class Goithau(models.Model):
     # ten_goithau = fields.Char(string='Tên Gói thầu')
     name = fields.Char(string='Tên Gói thầu')
     diadiem = fields.Char(string='Địa điểm triển khai')
-    so_ngay_QDDT = fields.Char(string='Số, ngày QĐ đầu tư')
+    so_ngay_QDDT = fields.Char(string='Số, ngày QĐ đầu tư', default='')
     Nam_QDDT = fields.Char(string='Năm QĐ đầu tư')
     chudautu = fields.Char(string='Chủ đầu tư')
     gia_du_toan = fields.Char(string='Giá dự toán')

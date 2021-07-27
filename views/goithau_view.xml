@@ -39,7 +39,7 @@
                                 <field name="name" required="True"/>
                                 <field name="chudautu"/>
                                 <field name="so_ngay_QDDT"/>
-                                <field name="Nam_QDDT"/>
+                                <field name="Nam_QDDT"  attrs = "{'required': [('so_ngay_QDDT', '!=', '')]}"/>
                                 <field name="diadiem"/>
                                 <field name="donvi_id"/>
                                 <field name="linhvucdauthau_id"/>
