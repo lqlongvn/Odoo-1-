@@ -28,7 +28,13 @@
                         <button name="truongdonvi_duyet_goithau" string="Phê duyệt" type="object" class="btn-primary" states="1"  groups="module_1.group_tbluser_manager"/>
                         <button name="truongdonvi_reject_goithau" string="Reject" type="object" class="btn-primary"  states="1" style="background-color:red" groups="module_1.group_tbluser_manager"/>
                         <button name="admin_duyet_goithau" string="Phê duyệt" type="object" class="btn-primary" states="2"/>
-                        <button name="btn_huy_goithau" string="Hủy Gói thầu" type="object" class="btn-primary" states="2" style="background-color:red"/>
+                        <button
+                                name="%(module_1.goithau_remove_reason_action)d"
+                                string="Hủy Gói thầu"
+                                type="action"
+                                class="btn-primary"
+                                states="2" style="background-color:red"
+                        />
                         <button name="khoiphuc_goithau" string="Khôi phục lại Gói thầu" type="object" class="btn-primary" states="3"/>
                         <button name="remove_goithau" string="Remove" type="object" class="btn-primary" style="background-color:red" states="3"/>
                         <field name="state" widget="statusbar"/>
