@@ -13,6 +13,7 @@
     'website': '',
     'depends': [],
     'data': [
+        'wizard/goithau_remove_reason_view.xml',
         'views/goithau_view.xml',
         'views/user_view.xml',
         'views/donvi_view.xml',

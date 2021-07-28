@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <record id="remove_reason_for_goithau_form_view" model="ir.ui.view">-->
+<!--            <field name="name">Get Remove reason for Goi thau</field>-->
+<!--            <field name="model">goithau.remove.reason</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Lý do hủy Gói Thầu">-->
+<!--                    <footer>-->
+<!--                        <button string="Cancel" special="cancel" class="btn-secondary"/>-->
+<!--                    </footer>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record id="remove_reason_for_goithau_action" model="ir.actions.act_window">-->
+<!--            <field name="name">Remove Reason for Gói Thầu</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">goithau.remove.reason</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>
