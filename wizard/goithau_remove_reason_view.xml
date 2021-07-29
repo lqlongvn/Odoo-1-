@@ -6,7 +6,11 @@
             <field name="model">goithau.remove.reason</field>
             <field name="arch" type="xml">
                 <form string="Lý do hủy Gói Thầu">
+                    <group>
+                        <field name="goithau_remove_reason" required="1"/>
+                    </group>
                     <footer>
+                        <button string="Update" type="object" name="update_goithau_remove_reason" class="btn-primary"/>
                         <button string="Cancel" special="cancel" class="btn-secondary"/>
                     </footer>
                 </form>
