@@ -13,6 +13,7 @@
                     <field name="linhvucdauthau_id"/>
                     <field name="hinhthucdauthau_id"/>
                     <field name="hinhthuclcnt_id"/>
+                    <field name="goithau_remove_state"/>
                 </tree>
             </field>
         </record>
@@ -63,6 +64,7 @@
                                 <field name="con_no_nha_thau"/>
                                 <field name="da_quyet_toan"/>
                                 <field name="chuthich"/>
+                                <field name="goithau_remove_state"/>
                             </group>
                         </group>
                     </sheet>

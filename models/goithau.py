@@ -45,6 +45,10 @@ class Goithau(models.Model):
         pass
         # self.active = not self.active
 
+    goithau_remove_state = fields.Selection(
+        selection=[('0', 'Gói thầu còn giá trị, chưa bị hủy'), ('1', 'Thông tin khai báo sai/thiếu'), ('2', 'Gói thầu chưa được cấp vốn'),
+                   ('3', 'Gói thầu đã quá thời hạn triển khai')], string='Lý do hủy gói thầu')
+
     state = fields.Selection(
         selection=[('0', 'Nhập số liệu'), ('1', 'Trưởng đơn vị duyệt'), ('2', 'Admin duyệt'), ('3', 'Gói thầu đã hủy')],
         default='0', string='State')

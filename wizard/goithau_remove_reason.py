@@ -8,4 +8,7 @@ class GoithauRemoveReason(models.TransientModel):
         selection=[('1', 'Thông tin khai báo sai/thiếu'), ('2', 'Gói thầu chưa được cấp vốn'), ('3', 'Gói thầu đã quá thời hạn triển khai')], string='Reason')
 
     def update_goithau_remove_reason(self):
-        pass
+        goithau_id = self.env.context.get('active_id', False)
+        goithau_record = self.env['employee'].browse(goithau_id)
+        goithau_record.write({'goithau_remove_state': self.goithau_remove_reason})
+        return True
