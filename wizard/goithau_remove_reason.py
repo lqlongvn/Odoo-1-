@@ -11,4 +11,5 @@ class GoithauRemoveReason(models.TransientModel):
         goithau_id = self.env.context.get('active_id', False)
         goithau_record = self.env['goithau'].browse(goithau_id)
         goithau_record.write({'goithau_remove_state': self.goithau_remove_reason})
+        goithau_record.write({'state': '3'})
         return True
