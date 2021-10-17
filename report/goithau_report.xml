@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+                id="action_report_goithau"
+                string="Thông tin Gói thầu"
+                model="goithau"
+                report_type="qweb-pdf"
+                file="module_1.report_goithau"
+                name="module_1.report_goithau"
+                print_report_name="'Goi thau %s' % (object.name)"
+        />
+        <template id="report_goithau">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+<!--                    <div class="page">-->
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr class="o_report_header">
+                                    <th class="o_report_line_header">Tên gói thầu</th>
+                                    <th class="o_report_line_header">Địa điểm</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+<!--                    </div>-->
+                </t>
+            </t>
+
+        </template>
+    </data>
+</odoo>

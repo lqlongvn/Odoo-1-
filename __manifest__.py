@@ -18,6 +18,7 @@
         'views/user_view.xml',
         'views/donvi_view.xml',
         'views/thongtin_dauthau_view.xml',
+        'report/goithau_report.xml',
         'security/security.xml',
         'security/ir.model.access.csv'
     ],
