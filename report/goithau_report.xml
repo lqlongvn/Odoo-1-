@@ -22,7 +22,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-
+                                <t t-foreach="docs" t-as="goithau">
+                                    <tr>
+                                        <td>
+                                            <span t-field="goithau.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="goithau.diadiem"/>
+                                        </td>
+                                    </tr>
+                                </t>
                             </tbody>
                         </table>
 <!--                    </div>-->
