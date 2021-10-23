@@ -13,7 +13,7 @@
         <template id="report_goithau">
             <t t-call="web.html_container">
                 <t t-call="web.external_layout">
-<!--                    <div class="page">-->
+                    <div class="page">
                         <table class="table table-sm o_main_table">
                             <thead>
                                 <tr class="o_report_header">
@@ -58,7 +58,7 @@
                                 </t>
                             </tbody>
                         </table>
-<!--                    </div>-->
+                    </div>
                 </t>
             </t>
 
