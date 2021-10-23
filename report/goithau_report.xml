@@ -18,7 +18,13 @@
                             <thead>
                                 <tr class="o_report_header">
                                     <th class="o_report_line_header">Tên gói thầu</th>
+                                    <th class="o_report_line_header">Đơn vị</th>
                                     <th class="o_report_line_header">Địa điểm</th>
+                                    <th class="o_report_line_header">Số QĐ</th>
+                                    <th class="o_report_line_header">Năm </th>
+                                    <th class="o_report_line_header">Lĩnh vực đấu thầu</th>
+                                    <th class="o_report_line_header">Hình thức đấu thầu</th>
+                                    <th class="o_report_line_header">Hình thức Lựa chọn nhà thầu</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -28,7 +34,25 @@
                                             <span t-field="goithau.name"/>
                                         </td>
                                         <td>
+                                            <span t-field="goithau.donvi_id"/>
+                                        </td>
+                                        <td>
                                             <span t-field="goithau.diadiem"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="goithau.so_ngay_QDDT"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="goithau.Nam_QDDT"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="goithau.linhvucdauthau_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="goithau.hinhthucdauthau_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="goithau.hinhthuclcnt_id"/>
                                         </td>
                                     </tr>
                                 </t>
